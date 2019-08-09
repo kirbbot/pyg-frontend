@@ -1,0 +1,126 @@
+// =============================================================================
+// https://gist.github.com/jonathantneal/d0460e5c2d5d7f9bc5e6
+// String Replace
+// =============================================================================
+
+@function str-replace($string, $search, $replace: "") {
+        $index: str-index($string, $search);
+
+        @if $index {
+                @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+        }
+
+        @return $string;
+}
+
+// =============================================================================
+// Font Face
+// https://gist.github.com/jonathantneal/d0460e5c2d5d7f9bc5e6 
+// =============================================================================
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+        $src: null;
+
+        $extmods: (
+                eot: "?",
+                svg: "#" + str-replace($name, " ", "_")
+        );
+
+        $formats: (
+                otf: "opentype",
+                ttf: "truetype"
+        );
+
+        @each $ext in $exts {
+                $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+                $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+                $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+        }
+
+        @font-face {
+                font-family: quote($name);
+                font-style: $style;
+                font-weight: $weight;
+                src: $src;
+        }
+}
+
+// =============================================================================
+// Vertically align anything
+// http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/
+// =============================================================================
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin vertical-align-noheader($position: relative) {
+  position: $position;
+  top:calc(50% - 60px);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+
+// =============================================================================
+// Transition
+// https://responsivedesign.is/articles/helpful-sass-mixins/
+// =============================================================================
+@mixin transition($what: all, $time: 0.6s, $how: ease-out) {
+    -webkit-transition: $what $time $how;
+    -moz-transition:    $what $time $how;
+    -ms-transition:     $what $time $how;
+    -o-transition:      $what $time $how;
+    transition:         $what $time $how;
+}
+
+// =============================================================================
+// Breakpoints
+// https://responsivedesign.is/articles/helpful-sass-mixins/
+// =============================================================================
+ @mixin breakpoint($point) {
+   @if $point == desktop {
+     @media (min-width: 1120px) { @content ; }
+  }
+   @else if $point == laptop {
+     @media (min-width: 1024px) { @content ; }
+  }
+    @else if $point == tablet {
+     @media (min-width: 601px) { @content ; }
+  }
+  @else if $point == mobile {
+     @media (max-width: 600px)  { @content ; }
+  }
+  @else if $point == smallmobile {
+     @media (max-width: 320px)  { @content ; }
+  }
+}
+// =============================================================================
+// Clear Floats
+// https://responsivedesign.is/articles/helpful-sass-mixins/
+// =============================================================================
+@mixin clearit {
+     &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+    zoom: 1;
+}
+// =============================================================================
+// Flexboxes
+// https://css-tricks.com/using-flexbox/
+// =============================================================================
+@mixin flexbox{
+        display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox;      /* TWEENER - IE 10 */
+        display: -webkit-flex;     /* NEW - Chrome */
+        display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}

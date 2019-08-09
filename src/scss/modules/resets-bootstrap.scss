@@ -1,0 +1,11 @@
+.nav-tabs{
+        li{
+                margin-bottom:-3px;
+                a{
+                        padding:0;
+                        &.active{
+                                 border:none;
+                        }
+                }
+        }
+}

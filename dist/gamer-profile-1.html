@@ -1,0 +1,149 @@
+<!-- public/views/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Paws Your Game</title>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+  <nav>
+        <h1>Paws Your Game</h1>
+        <ul>
+                <li>Our Tail</li>
+                <li>Leaderboard</li>
+                <li>News</li>
+                <li><i class="icon nav-search-icon"></i></li>
+                <li class="nav-signin_signup">Sign In/Up</li>
+                <li class="nav-donate">Donate</li>
+        </ul>
+  </nav>
+  <div id="Gamer_Profile" class="content">
+        <div class="section gamer_profile-overview">
+                <div class="gamer_profile-overview-avatar_username">
+                        <img class="gamer_profile-overview-avatar avatar"/>
+                        <h1 class="gamer_profile-overview-username">Puggle</br>Lover</h1>
+                </div>
+                <ul class="gamer_profile-overview-stats gamer_profile-list">
+                        <li class="gamer_profile-overview-stats-raised">
+                                <i class="icon icon-block stats-raised-icon">moneybag</i>
+                                <dl>
+                                        <dt>Raised</dt>
+                                        <dd>$3,405</dd>
+                                </dl>
+                        </li>
+                        <li class="gamer_profile-overview-stats-rank">
+                                <i class="icon icon-block">trophy</i>
+                                <dl>
+                                        <dt>Rank</dt>
+                                        <dd>420 / 5,300</dd>
+                                </dl>
+                        </li>
+                        <li class="gamer_profile-overview-stats-upcoming_fundraiser">
+                                <i class="icon icon-standard">calendar</i>
+                                <dl>
+                                        <dt>Upcoming Fundraiser</dt>
+                                        <dd>September 30, 2019</dd>
+                                </dl>
+                        </li>
+                        <li class="gamer_profile-overview-stats-location">
+                                <i class="icon icon-block">earth</i>
+                                <dl>
+                                        <dt>Location</dt>
+                                        <dd>NYC</dd>
+                                </dl>
+                        </li>
+                        <li class="gamer_profile-overview-stats-twitch_handle">
+                                <i class="icon"></i>
+                                <dl>
+                                        <dt>Twitch Handle</dt>
+                                        <dd>Superzombiebbq</dd>
+                                </dl>
+                        </li>
+                </ul>
+        </div>
+
+        <div class="section gamer_profile-why_i_paws">
+                <div class="why_i_paws">
+                        <header><h1>Why I Paws</h1><i class="icon"></i></header>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+        </div>
+
+        <div class="gamer_profile-fundraisers">
+
+                <ul class="nav nav-tabs" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#Gamer_Profile-Upcoming_Fundraiser" role="tab" aria-controls="home" aria-selected="true">Upcoming Fundraisers</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#Gamer_Profile-Past_Fundraisers" role="tab" aria-controls="profile" aria-selected="false">Past Fundraisers</a>
+                  </li>
+                </ul>
+
+                <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="Gamer_Profile-Upcoming_Fundraiser" role="tabpanel" aria-labelledby="Gamer_Profile-Upcoming_Fundraiser-tab">
+                                <ul class="gamer_profile-list">
+                                        <li class="upcoming_fundraiser-date">
+                                                 <span class="icon icon-standard">calendar</span>
+                                                 <h2>August 30,2019</h2>
+                                        </li>
+                                        <li class="upcoming_fundraiser-countdown">
+                                                 <span class="icon icon-standard">stopwatch</span>
+                                                 <h2>14<span>Days</span> 20<span>Hours</span> 15<span>Minutes</span> 37<span>Seconds</span></h2>
+                                        </li>
+                                        <li class="upcoming_fundraiser-donations">
+                                                 <span class="icon icon-block">moneybag</span>
+                                                 <h2></h2>
+                                                 <button class="button button-green">Donate</button>
+                                        </li>
+                                        <li class="upcoming_fundraiser-donors">
+                                                 <span class="icon icon-standard">user</span>
+                                                 <h2>45 Donations</h2>
+                                        </li>
+                                </ul>
+                                <ul class="upcoming_fundraiser-share">
+                                        <li>
+                                                <span class="icon icon-standard">link</span>
+                                                <span class="text">Copy Page Link</span>
+                                        </li>
+                                        <li>
+                                                <span class="icon icon-standard">calendar</span>
+                                                <span class="text">Add to Calendar</span>
+                                        </li>
+                                        <li>
+                                                <span class="icon icon-social">facebook</span>
+                                                <span class="text">Share to Facebook</span>
+                                        </li>
+                                </ul>
+                        </div><!-- end upcoming fundraiser tab -->
+                        <div class="tab-pane fade" id="Gamer_Profile-Past_Fundraisers" role="tabpanel" aria-labelledby="profile-tab">
+                                <ul class="gamer_profile-list">
+                                        <li class="past_fundraiser-date">
+                                                 <span class="icon icon-standard">calendar</span>
+                                                 <h2>August 30,2019</h2>
+                                        </li>
+                                        <li class="past_fundraiser-donations">
+                                                 <span class="icon icon-block">moneybag</span>
+                                                 <h2>$4,300</h2>
+                                        </li>
+                                        <li class="past_fundraiser-donors">
+                                                 <span class="icon icon-standard">user</span>
+                                                 <h2>45 Donations</h2>
+                                        </li>
+                                </ul>
+                                <div class="game_profile-past_fundraiser-twitch_stream">
+                                </div>
+                        </div>
+                </div>
+        </div>
+  </div>
+</body>
+</html>

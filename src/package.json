@@ -1,0 +1,24 @@
+{
+  "name": "pyg",
+  "version": "1.0.0",
+  "description": "Non profit dedicated to raising funds for no kill animal shelters via fundraising campaigns",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "grunt": "^1.0.4",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-exec": "^3.0.0",
+    "jquery": "^3.4.1",
+    "load-grunt-tasks": "^5.1.0",
+    "popper.js": "^1.15.0"
+  },
+  "devDependencies": {
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kirby",
+  "license": "ISC"
+}
