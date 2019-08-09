@@ -346,4 +346,15 @@ $(document).ready(function(){
         textAfter: ' raised',
         textAfterGoal: ' goal'
     });
+    $('.gamer_profile-fundraisers-past-donations-progress_bar').goalProgress({
+        goalAmount: 500,
+        currentAmount: 1200,
+        textBefore: '$',
+        textAfter: ' raised',
+        textAfterGoal: ' goal'
+    });
+
+    /* Set minimum height of past fundraiser tab */
+    var gamer_profile_fundraisers_upcoming_h = $("#Gamer_Profile-Fundraisers-Upcoming").height();
+    $("#Gamer_Profile-Fundraisers-Past").css('min-height', gamer_profile_fundraisers_upcoming_h);
 });

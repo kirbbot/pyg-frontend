@@ -144,13 +144,14 @@ a:hover {
   font-family: ssBlock;
 }
 
-.nav-tabs li {
-  margin-bottom: -3px;
-}
-.nav-tabs li a {
+.nav-tabs .nav-item a {
   padding: 0;
+  border: 0;
 }
-.nav-tabs li a.active {
+.nav-tabs .nav-item a:hover {
+  border: 0;
+}
+.nav-tabs .nav-item a.active {
   border: none;
 }
 
@@ -364,6 +365,20 @@ iPad 3
   padding: 40px;
 }
 
+.goalProgress {
+  background: #e6fad4;
+  height: 60px;
+}
+
+.progressBar {
+  background: #00c214;
+  color: #fff;
+  display: block;
+  overflow: hidden;
+  padding: 5px;
+  height: 60px;
+}
+
 ul.gamer_profile-list li {
   display: flex;
   flex-direction: row;
@@ -408,6 +423,18 @@ ul.gamer_profile-list li .icon {
 
 ul.gamer_profile-overview-stats {
   max-width: 600px;
+}
+ul.gamer_profile-overview-stats li {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 25px 0;
+}
+ul.gamer_profile-overview-stats li .icon {
+  font-size: 30px;
+  text-align: center;
+  padding-right: 40px;
 }
 ul.gamer_profile-overview-stats li:not(:last-child) {
   border-bottom: 1px solid #5900ff;
@@ -492,9 +519,7 @@ ul.gamer_profile-overview-stats .gamer_profile-overview-stats-raised i, ul.gamer
   color: #1b002b;
 }
 .gamer_profile-fundraisers .tab-content {
-  background-color: #fff;
   flex: 1;
-  padding: 0 40px 40px;
 }
 .gamer_profile-fundraisers h3 {
   font-family: alphaHeadline;
@@ -504,6 +529,22 @@ ul.gamer_profile-overview-stats .gamer_profile-overview-stats-raised i, ul.gamer
 }
 .gamer_profile-fundraisers h3 span {
   font-size: 22px;
+}
+.gamer_profile-fundraisers #Gamer_Profile-Fundraisers-Upcoming {
+  background-color: #fff;
+  padding: 40px;
+}
+.gamer_profile-fundraisers #Gamer_Profile-Fundraisers-Upcoming .gamer_profile-fundraisers-upcoming-list > li {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 25px 0;
+}
+.gamer_profile-fundraisers #Gamer_Profile-Fundraisers-Upcoming .gamer_profile-fundraisers-upcoming-list > li .icon {
+  font-size: 30px;
+  text-align: center;
+  padding-right: 40px;
 }
 .gamer_profile-fundraisers #Gamer_Profile-Fundraisers-Upcoming li.gamer_profile-fundraisers-upcoming-donations {
   justify-content: space-between;
@@ -517,18 +558,6 @@ ul.gamer_profile-overview-stats .gamer_profile-overview-stats-raised i, ul.gamer
 }
 .gamer_profile-fundraisers #Gamer_Profile-Fundraisers-Upcoming li.gamer_profile-fundraisers-upcoming-donations .gamer_profile-fundraisers-upcoming-donations-progress_bar h3 {
   color: #00c214;
-}
-.gamer_profile-fundraisers #Gamer_Profile-Fundraisers-Upcoming li.gamer_profile-fundraisers-upcoming-donations .goalProgress {
-  background: #e6fad4;
-  height: 60px;
-}
-.gamer_profile-fundraisers #Gamer_Profile-Fundraisers-Upcoming li.gamer_profile-fundraisers-upcoming-donations .progressBar {
-  background: #00c214;
-  color: #fff;
-  display: block;
-  overflow: hidden;
-  padding: 5px;
-  height: 60px;
 }
 .gamer_profile-fundraisers #Gamer_Profile-Fundraisers-Upcoming li.gamer_profile-fundraisers-upcoming-donations .gamer_profile-fundraisers-upcoming-donations-donate_btn {
   align-self: flex-end;
@@ -555,6 +584,32 @@ ul.gamer_profile-overview-stats .gamer_profile-overview-stats-raised i, ul.gamer
 .gamer_profile-fundraisers .gamer_profile-fundraisers-upcoming-share .text {
   font-family: sourceSansPro;
   font-style: light;
+}
+
+/* Fundraisers Past */
+#Gamer_Profile-Fundraisers-Past .gamer_profile-fundraisers-past-item {
+  background-color: #fff;
+  padding: 40px;
+  margin-bottom: 20px;
+}
+#Gamer_Profile-Fundraisers-Past .gamer_profile-fundraisers-past-item > ul li {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 25px 0;
+}
+#Gamer_Profile-Fundraisers-Past .gamer_profile-fundraisers-past-item > ul li .icon {
+  font-size: 30px;
+  text-align: center;
+  padding-right: 40px;
+}
+#Gamer_Profile-Fundraisers-Past .gamer_profile-fundraisers-past-item .gamer_profile-fundraisers-past-donations-progress_bar {
+  flex-grow: 1;
+}
+#Gamer_Profile-Fundraisers-Past .gamer_profile-fundraisers-past-item .gamer_profile-fundraisers-past-donations .icon,
+#Gamer_Profile-Fundraisers-Past .gamer_profile-fundraisers-past-item .gamer_profile-fundraisers-past-donations h3 {
+  color: #00c214;
 }
 
 /* Donations */

@@ -28,6 +28,23 @@
 }
 
 // ********************************
+// Progress Bar
+// ********************************
+.goalProgress {
+  background: $ltgreen;
+  height:60px;
+}
+
+.progressBar {
+  background: $green;
+  color: #fff;
+  display: block;
+  overflow: hidden;
+  padding:5px;
+  height:60px;
+}
+
+// ********************************
 // Gamer Profile 
 // ********************************
 
@@ -45,6 +62,23 @@ ul.gamer_profile-list li{
         }
 }
 
+@mixin list_style{
+        display:flex;
+        flex-direction:row;
+        flex-wrap:nowrap;
+        align-items:center;
+        padding:25px 0;
+
+        .icon{
+                font-size:30px;
+                text-align: center;
+                padding-right:40px;
+        }   
+}
+
+// ********************************
+// Gamer Profile  - Overview
+// ********************************
 .gamer_profile-overview{
         background-color: $dkpurple;
 }
@@ -74,8 +108,12 @@ ul.gamer_profile-list li{
 }
 ul.gamer_profile-overview-stats{
         max-width: 600px;
-        li:not(:last-child){ 
-                border-bottom:1px solid $purple;
+
+        li{
+                @include list_style;
+                &:not(:last-child){
+                         border-bottom:1px solid $purple;
+                }
         }
         .icon, dd{
                 color:$white;
@@ -130,6 +168,9 @@ ul.gamer_profile-overview-stats{
         }
         
 }
+// ********************************
+// Gamer Profile  - Fundraisers
+// ********************************
 .gamer_profile-fundraisers{
         background-color:$teal;
         display:flex;
@@ -164,9 +205,7 @@ ul.gamer_profile-overview-stats{
         }
 
         .tab-content{
-                background-color:$white;
                 flex:1;
-                padding:0 40px 40px;
         }
 
         h3{
@@ -178,6 +217,11 @@ ul.gamer_profile-overview-stats{
         }
 
         #Gamer_Profile-Fundraisers-Upcoming{
+                background-color:$white;
+                padding:40px;
+                .gamer_profile-fundraisers-upcoming-list >li{
+                        @include list_style;
+                }
                 li{
                         &.gamer_profile-fundraisers-upcoming-donations{
                                 justify-content: space-between;
@@ -192,19 +236,6 @@ ul.gamer_profile-overview-stats{
                                         h3{
                                                 color:$green;
                                         }
-                                }
-                                .goalProgress {
-                                  background: $ltgreen;
-                                  height:60px;
-                                }
-
-                                .progressBar {
-                                  background: $green;
-                                  color: #fff;
-                                  display: block;
-                                  overflow: hidden;
-                                  padding:5px;
-                                  height:60px;
                                 }
                                 .gamer_profile-fundraisers-upcoming-donations-donate_btn{
                                         align-self:flex-end;
@@ -233,6 +264,26 @@ ul.gamer_profile-overview-stats{
                 .text{
                         font-family:sourceSansPro;
                         font-style:light;
+                }
+        }
+}
+
+/* Fundraisers Past */
+#Gamer_Profile-Fundraisers-Past{
+        .gamer_profile-fundraisers-past-item{
+                background-color:$white;
+                padding:40px;
+                margin-bottom:20px;
+
+                > ul li{
+                        @include list_style;
+                }
+                .gamer_profile-fundraisers-past-donations-progress_bar{
+                        flex-grow:1;
+                }
+                .gamer_profile-fundraisers-past-donations .icon,
+                .gamer_profile-fundraisers-past-donations h3{
+                        color:$green;
                 }
         }
 }
