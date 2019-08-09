@@ -33,7 +33,7 @@
 ul.gamer_profile-list li{
         display:flex;
         flex-direction:row;
-        flex-wrap:none;
+        flex-wrap:nowrap;
         align-items:center;
         height:100px;
 
@@ -167,16 +167,27 @@ ul.gamer_profile-overview-stats{
                 flex:1;
                 padding:0 40px 40px;
         }
-        #Gamer_Profile-Upcoming_Fundraiser{
+
+        h3{
+                @include alpha-xl;
+        }
+
+        #Gamer_Profile-Fundraisers-Upcoming{
                 li{
-                        &.upcoming_fundraiser-donations{
+                        &.gamer_profile-fundraisers-upcoming-donations{
                                 .icon{
                                         color:$green;
                                 }
                         }
+                        &.gamer_profile-fundraisers-upcoming-countdown h3{
+                                font-size:22px;
+                                span{
+                                        @include alpha-xl;
+                                }
+                        }
                 }
         }
-        .upcoming_fundraiser-share{
+        .gamer_profile-fundraisers-upcoming-share{
                 display:flex;
                 flex-direction:row;
                 flex-wrap: none;
@@ -192,6 +203,8 @@ ul.gamer_profile-overview-stats{
                 }
         }
 }
+
+/* Donations */
 .gamer_profile-donations{
         background-color:$ltgreen;
 

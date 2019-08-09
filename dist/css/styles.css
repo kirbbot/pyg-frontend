@@ -343,7 +343,7 @@ iPad 3
 ul.gamer_profile-list li {
   display: flex;
   flex-direction: row;
-  flex-wrap: none;
+  flex-wrap: nowrap;
   align-items: center;
   height: 100px;
 }
@@ -472,24 +472,40 @@ ul.gamer_profile-overview-stats .gamer_profile-overview-stats-raised i, ul.gamer
   flex: 1;
   padding: 0 40px 40px;
 }
-.gamer_profile-fundraisers #Gamer_Profile-Upcoming_Fundraiser li.upcoming_fundraiser-donations .icon {
+.gamer_profile-fundraisers h3 {
+  font-family: alphaHeadline;
+  font-size: 36px;
+  text-transform: uppercase;
+  line-height: 50px;
+}
+.gamer_profile-fundraisers #Gamer_Profile-Fundraisers-Upcoming li.gamer_profile-fundraisers-upcoming-donations .icon {
   color: #00c214;
 }
-.gamer_profile-fundraisers .upcoming_fundraiser-share {
+.gamer_profile-fundraisers #Gamer_Profile-Fundraisers-Upcoming li.gamer_profile-fundraisers-upcoming-countdown h3 {
+  font-size: 22px;
+}
+.gamer_profile-fundraisers #Gamer_Profile-Fundraisers-Upcoming li.gamer_profile-fundraisers-upcoming-countdown h3 span {
+  font-family: alphaHeadline;
+  font-size: 36px;
+  text-transform: uppercase;
+  line-height: 50px;
+}
+.gamer_profile-fundraisers .gamer_profile-fundraisers-upcoming-share {
   display: flex;
   flex-direction: row;
   flex-wrap: none;
   justify-content: center;
   margin: 40px 0;
 }
-.gamer_profile-fundraisers .upcoming_fundraiser-share li:not(:last-child) {
+.gamer_profile-fundraisers .gamer_profile-fundraisers-upcoming-share li:not(:last-child) {
   padding-right: 20px;
 }
-.gamer_profile-fundraisers .upcoming_fundraiser-share .text {
+.gamer_profile-fundraisers .gamer_profile-fundraisers-upcoming-share .text {
   font-family: sourceSansPro;
   font-style: light;
 }
 
+/* Donations */
 .gamer_profile-donations {
   background-color: #e6fad4;
 }
