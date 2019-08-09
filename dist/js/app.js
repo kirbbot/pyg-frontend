@@ -348,7 +348,7 @@ $(document).ready(function(){
     });
     $('.gamer_profile-fundraisers-past-donations-progress_bar').goalProgress({
         goalAmount: 500,
-        currentAmount: 1200,
+        currentAmount: 500,
         textBefore: '$',
         textAfter: ' raised',
         textAfterGoal: ' goal'
