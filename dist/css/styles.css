@@ -124,6 +124,14 @@ p {
   font-style: regular;
 }
 
+a {
+  color: #1b002b;
+  transition: color .5s ease-in-out;
+}
+a:hover {
+  color: #5900ff;
+}
+
 .icon-standard {
   font-family: ssStandard;
 }

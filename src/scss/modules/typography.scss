@@ -37,6 +37,15 @@ p{
 h2{
 }
 
+a{
+        color:$dkpurple;
+        transition: color .5s ease-in-out;
+
+        &:hover{
+                color:$purple;
+        }
+}
+
 .icon-standard{
         font-family:ssStandard;
 }
