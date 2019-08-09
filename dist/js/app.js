@@ -1,3 +1,68 @@
+/*
+ *  Tinacious Design goalProgress jQuery plugin
+ *  Plugin URL: https://github.com/tinacious/goalProgress
+ *
+ *  Christina Holly (Tinacious Design)
+ *  http://tinaciousdesign.com
+ *
+ */
+!function($){
+        $.fn.extend({
+                goalProgress: function(options) {
+                        var defaults = {
+                                goalAmount: 100,
+                                currentAmount: 50,
+                                speed: 1000,
+                                textBefore: '',
+                                textAfter: '',
+                                textAfterGoal:'',
+                                milestoneNumber: 70,
+                                milestoneClass: 'almost-full',
+                                callback: function() {}
+                        }
+
+                        var options = $.extend(defaults, options);
+                        return this.each(function(){
+                                var obj = $(this);
+                                
+                                // Collect and sanitize user input
+                                var goalAmountParsed = parseInt(defaults.goalAmount);
+                                var currentAmountParsed = parseInt(defaults.currentAmount);
+
+                                // Calculate size of the progress bar
+                                var percentage = (currentAmountParsed / goalAmountParsed) * 100;
+
+                                var milestoneNumberClass = (percentage > defaults.milestoneNumber) ? ' ' + defaults.milestoneClass : ''
+
+                                // Generate the HTML
+                                var progressBar = '<div class="progressBar"></div>';
+
+                                var progressBarText = '<h3 class="progressBarText">' + defaults.textBefore + currentAmountParsed + '<span>' + defaults.textAfter + '</span> / ' + defaults.textBefore + goalAmountParsed + '<span>' + defaults.textAfterGoal +'</span></h3>';
+
+                                var progressBarWrapped = progressBarText + '<div class="goalProgress' + milestoneNumberClass + '">' + progressBar + '</div>';
+
+                                // Append to the target
+                                obj.append(progressBarWrapped);
+
+                                // Ready
+                                var rendered = obj.find('div.progressBar');
+
+                                // Remove Spaces
+                                rendered.each(function() {
+                                        $(this).html($(this).text().replace(/\s/g, '&nbsp;'));
+                                });
+
+                                // Animate!
+                                rendered.animate({width: percentage +'%'}, defaults.speed, defaults.callback);
+
+                                if(typeof callback == 'function') {
+                                        callback.call(this)
+                                }
+                        });
+                }
+        });
+}(window.jQuery);
+
 /*!
  * Countdown v0.1.0
  * https://github.com/fengyuanchen/countdown
@@ -165,16 +230,19 @@
                 this.output("seconds");
             } else {
                 this.seconds = 59;
+                this.output("seconds");
 
                 if (--this.minutes >= 0) {
                     this.output("minutes");
                 } else {
                     this.minutes = 59;
+                    this.output("minutes");
 
                     if (--this.hours >= 0) {
                         this.output("hours");
                     } else {
                         this.hours = 23;
+                        this.output("hours");
 
                         if (--this.days >= 0) {
                             this.output("days");
@@ -267,4 +335,15 @@
         $("[countdown]").countdown();
     });
 
+});
+
+/* App.js */
+$(document).ready(function(){
+    $('.gamer_profile-fundraisers-upcoming-donations-progress_bar').goalProgress({
+        goalAmount: 1500,
+        currentAmount: 1200,
+        textBefore: '$',
+        textAfter: ' raised',
+        textAfterGoal: ' goal'
+    });
 });

@@ -322,6 +322,22 @@ iPad 3
   background-color: #009910;
 }
 
+.button {
+  font-family: alphaHeadline;
+  font-size: 28px;
+  padding: 5px 20px;
+}
+
+.button-green {
+  color: #00c214;
+  border: 2px solid #00c214;
+  transition: all .5s ease-in-out;
+}
+.button-green:hover {
+  background-color: #00c214;
+  color: #fff;
+}
+
 .section {
   display: flex;
   flex-direction: row;
@@ -345,7 +361,7 @@ ul.gamer_profile-list li {
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
-  height: 100px;
+  padding: 25px 0;
 }
 ul.gamer_profile-list li .icon {
   font-size: 30px;
@@ -478,8 +494,36 @@ ul.gamer_profile-overview-stats .gamer_profile-overview-stats-raised i, ul.gamer
   text-transform: uppercase;
   line-height: 50px;
 }
+.gamer_profile-fundraisers h3 span {
+  font-size: 22px;
+}
+.gamer_profile-fundraisers #Gamer_Profile-Fundraisers-Upcoming li.gamer_profile-fundraisers-upcoming-donations {
+  justify-content: space-between;
+}
 .gamer_profile-fundraisers #Gamer_Profile-Fundraisers-Upcoming li.gamer_profile-fundraisers-upcoming-donations .icon {
   color: #00c214;
+}
+.gamer_profile-fundraisers #Gamer_Profile-Fundraisers-Upcoming li.gamer_profile-fundraisers-upcoming-donations .gamer_profile-fundraisers-upcoming-donations-progress_bar {
+  flex-grow: 1;
+  margin-right: 40px;
+}
+.gamer_profile-fundraisers #Gamer_Profile-Fundraisers-Upcoming li.gamer_profile-fundraisers-upcoming-donations .gamer_profile-fundraisers-upcoming-donations-progress_bar h3 {
+  color: #00c214;
+}
+.gamer_profile-fundraisers #Gamer_Profile-Fundraisers-Upcoming li.gamer_profile-fundraisers-upcoming-donations .goalProgress {
+  background: #e6fad4;
+  height: 60px;
+}
+.gamer_profile-fundraisers #Gamer_Profile-Fundraisers-Upcoming li.gamer_profile-fundraisers-upcoming-donations .progressBar {
+  background: #00c214;
+  color: #fff;
+  display: block;
+  overflow: hidden;
+  padding: 5px;
+  height: 60px;
+}
+.gamer_profile-fundraisers #Gamer_Profile-Fundraisers-Upcoming li.gamer_profile-fundraisers-upcoming-donations .gamer_profile-fundraisers-upcoming-donations-donate_btn {
+  align-self: flex-end;
 }
 .gamer_profile-fundraisers #Gamer_Profile-Fundraisers-Upcoming li.gamer_profile-fundraisers-upcoming-countdown h3 {
   font-size: 22px;

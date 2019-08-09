@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Paws Your Game</title>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="js/jquery.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -58,7 +58,7 @@
                                 <i class="icon icon-standard">calendar</i>
                                 <dl>
                                         <dt>Upcoming Fundraiser</dt>
-                                        <dd>September 30, 2019</dd>
+                                        <dd>June 30, 2020</dd>
                                 </dl>
                         </li>
                         <li class="gamer_profile-overview-stats-location">
@@ -101,11 +101,11 @@
                                 <ul class="gamer_profile-list gamer_profile-fundraisers-upcoming">
                                         <li class="gamer_profile-fundraisers-upcoming-date">
                                                  <span class="icon icon-standard">calendar</span>
-                                                 <h3>August 30,2019</h3>
+                                                 <h3>June 30,2020</h3>
                                         </li>
                                         <li class="gamer_profile-fundraisers-upcoming-countdown">
                                                 <span class="icon icon-standard">stopwatch</span>
-                                                <h3 class="countdown" countdown data-date="Sep 30 2019 21:00:00">
+                                                <h3 class="countdown" countdown data-date="Jun 30 2020 21:00:00">
                                                         <span data-days></span> Days
                                                         <span data-hours></span> Hours
                                                         <span data-minutes></span> Minutes
@@ -113,9 +113,10 @@
                                                 </h3>
                                         </li>
                                         <li class="gamer_profile-fundraisers-upcoming-donations">
-                                                 <span class="icon icon-block">moneybag</span>
-                                                 <h3></h3>
-                                                 <button class="button button-green">Donate</button>
+                                                <span class="icon icon-block">moneybag</span>
+                                                <h3></h3>
+                                                <div class="gamer_profile-fundraisers-upcoming-donations-progress_bar"></div>
+                                                <button class="button button-green gamer_profile-fundraisers-upcoming-donations-donate_btn">Donate</button>
                                         </li>
                                         <li class="gamer_profile-fundraisers-upcoming-donors">
                                                  <span class="icon icon-standard">user</span>

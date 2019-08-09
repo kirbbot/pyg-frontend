@@ -5,6 +5,7 @@
 @import 'modules/resets-bootstrap.scss';
 @import 'modules/media.scss';
 @import 'modules/nav.scss';
+@import 'modules/buttons.scss';
 
 // ********************************
 // Global
@@ -35,7 +36,7 @@ ul.gamer_profile-list li{
         flex-direction:row;
         flex-wrap:nowrap;
         align-items:center;
-        height:100px;
+        padding:25px 0;
 
         .icon{
                 font-size:30px;
@@ -170,15 +171,47 @@ ul.gamer_profile-overview-stats{
 
         h3{
                 @include alpha-xl;
+
+                span{
+                        font-size:22px;
+                }
         }
 
         #Gamer_Profile-Fundraisers-Upcoming{
                 li{
                         &.gamer_profile-fundraisers-upcoming-donations{
+                                justify-content: space-between;
+
                                 .icon{
                                         color:$green;
                                 }
+                                .gamer_profile-fundraisers-upcoming-donations-progress_bar{
+                                        flex-grow: 1;
+                                        margin-right:40px;
+
+                                        h3{
+                                                color:$green;
+                                        }
+                                }
+                                .goalProgress {
+                                  background: $ltgreen;
+                                  height:60px;
+                                }
+
+                                .progressBar {
+                                  background: $green;
+                                  color: #fff;
+                                  display: block;
+                                  overflow: hidden;
+                                  padding:5px;
+                                  height:60px;
+                                }
+                                .gamer_profile-fundraisers-upcoming-donations-donate_btn{
+                                        align-self:flex-end;
+                                }
+
                         }
+
                         &.gamer_profile-fundraisers-upcoming-countdown h3{
                                 font-size:22px;
                                 span{
