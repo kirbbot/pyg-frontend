@@ -847,6 +847,50 @@ li.leaderboard-list-item:first-child .leaderboard-list-item-name {
   margin-left: 10px;
 }
 
+.home-about {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
+}
+.home-about > div {
+  padding: 80px 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.home-about .icon {
+  font-size: 112px;
+  padding: 0 40px;
+}
+.home-about p {
+  font-family: sourceSansPro;
+  font-size: 24px;
+  text-transform: uppercase;
+  line-height: 40px;
+}
+.home-about .home-about-goal {
+  background-color: #e6fad4;
+}
+.home-about .home-about-goal .icon {
+  color: #00c214;
+}
+.home-about .home-about-funds {
+  background-color: #f2e6ff;
+}
+.home-about .home-about-funds .icon {
+  color: #5900ff;
+}
+.home-about .home-about-gamers {
+  background-color: #a3f8ff;
+}
+.home-about .home-about-gamers .icon {
+  color: #00c9db;
+}
+
 .news-article-title {
   font-family: sourceSansPro;
   font-weight: bold;

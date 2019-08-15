@@ -62,6 +62,18 @@
                 <?php } ?>
         </div><!--end home-news-->
         <div class="home-about section">
+                <div class="home-about-goal">
+                        <span class="icon icon-standard">dollarsign</span>
+                        <p>Our main goal is to provide funding for non-profit, no-kill animal rescues and refugees that will allow fosters and facilities to rescue more animals than ever before.</p>
+                </div>
+                <div class="home-about-funds">
+                        <p>We raise these funds in many ways, the primary source will be community gaming events and marathons.</p>
+                        <span class="icon icon-block">videogame</span>
+                </div>
+                <div class="home-about-gamers">
+                        <span class="icon icon-block">timer</span>
+                        <p>Participating gamers will be able to fundraise for the rescue of their choice while gaming for 24 hours straight.</p>
+                </div>
                 
         </div><!--end home-about-->
         <div classs="home-data section">

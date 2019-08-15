@@ -109,3 +109,47 @@
                 }
         }
 }
+.home-about{
+        display:flex;
+        flex-direction:column;
+        flex-wrap:nowrap;
+        justify-content: center;
+        align-items:stretch;
+
+        > div{
+                padding:80px 40px;
+                display:flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: space-around;
+                align-items:center;
+        }
+        .icon{
+                font-size:112px;
+                padding:0 40px;
+        }
+        p{
+                font-family:sourceSansPro;
+                font-size:24px;
+                text-transform: uppercase;
+                line-height:40px;
+        }
+        .home-about-goal{
+                background-color:$ltgreen;
+                .icon{
+                        color:$green;
+                }
+        }
+        .home-about-funds{
+                background-color: $ltpurple;
+                .icon{
+                        color:$purple;
+                }
+        }
+        .home-about-gamers{
+                background-color:$ltteal;
+                .icon{
+                        color:$teal;
+                }
+        }
+}
