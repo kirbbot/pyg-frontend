@@ -644,6 +644,10 @@ ul.gamer_profile-overview-stats .gamer_profile-overview-stats-raised i, ul.gamer
   font-size: 12px;
 }
 
+#Leaderboard {
+  background-color: #5900ff;
+}
+
 .section {
   display: flex;
   flex-direction: row;
