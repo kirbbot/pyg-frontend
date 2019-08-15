@@ -347,24 +347,6 @@ iPad 3
   color: #fff;
 }
 
-.section {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 40px;
-}
-
-.section-vertical {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  padding: 40px;
-}
-
 .goalProgress {
   background: #e6fad4;
   height: 60px;
@@ -660,6 +642,24 @@ ul.gamer_profile-overview-stats .gamer_profile-overview-stats-raised i, ul.gamer
   font-family: sourceSansPro;
   font-style: italic;
   font-size: 12px;
+}
+
+.section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.section-vertical {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
 }
 
 /*# sourceMappingURL=styles.css.map */
