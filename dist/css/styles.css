@@ -374,6 +374,15 @@ ul.gamer_profile-list li .icon {
   padding-right: 40px;
 }
 
+#Gamer_Profile .section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
 .gamer_profile-overview {
   background-color: #1b002b;
 }
@@ -644,10 +653,11 @@ ul.gamer_profile-overview-stats .gamer_profile-overview-stats-raised i, ul.gamer
   font-size: 12px;
 }
 
-#Leaderboard {
+.leaderboard {
   background-color: #1b002b;
 }
-#Leaderboard li.leaderboard-list-item {
+
+li.leaderboard-list-item {
   padding: 0 40px;
   display: flex;
   flex-direction: row;
@@ -658,36 +668,40 @@ ul.gamer_profile-overview-stats .gamer_profile-overview-stats-raised i, ul.gamer
   position: relative;
   transition: background-color .5s ease-in-out;
 }
-#Leaderboard li.leaderboard-list-item:hover {
+li.leaderboard-list-item:hover {
   background-color: rgba(89, 0, 255, 0.3);
   cursor: pointer;
 }
-#Leaderboard li.leaderboard-list-item:not(:last-child) {
+li.leaderboard-list-item:not(:last-child) {
   border-bottom: 1px solid rgba(89, 0, 255, 0.3);
 }
-#Leaderboard li.leaderboard-list-item:first-child .leaderboard-list-item-rank,
-#Leaderboard li.leaderboard-list-item:first-child .leaderboard-list-item-name {
+li.leaderboard-list-item:first-child .leaderboard-list-item-rank,
+li.leaderboard-list-item:first-child .leaderboard-list-item-name {
   color: #00c9db;
 }
-#Leaderboard .leaderboard-list-item-link {
+
+.leaderboard-list-item-link {
   position: absolute;
   width: 100%;
   height: 100%;
   z-index: 1;
 }
-#Leaderboard .leaderboard-list-item-rank {
+
+.leaderboard-list-item-rank {
   color: #5900ff;
   font-family: alphaHeadline;
   font-size: 46px;
   z-index: 2;
 }
-#Leaderboard .leaderboard-list-item-avatar {
+
+.leaderboard-list-item-avatar {
   max-height: 50px;
   width: auto;
   border-radius: 100px;
   z-index: 2;
 }
-#Leaderboard .leaderboard-list-item-name {
+
+.leaderboard-list-item-name {
   color: #fff;
   font-family: alphaHeadline;
   font-size: 36px;
@@ -696,18 +710,20 @@ ul.gamer_profile-overview-stats .gamer_profile-overview-stats-raised i, ul.gamer
   font-size: 30px;
   z-index: 2;
 }
-#Leaderboard .leaderboard-list-item-change {
+
+.leaderboard-list-item-change {
   font-size: 24px;
   z-index: 2;
   width: 50px;
 }
-#Leaderboard .leaderboard-list-item-change.leaderboard-list-item-change-icon_down {
+.leaderboard-list-item-change.leaderboard-list-item-change-icon_down {
   color: #ff5b00;
 }
-#Leaderboard .leaderboard-list-item-change.leaderboard-list-item-change-icon_up {
+.leaderboard-list-item-change.leaderboard-list-item-change-icon_up {
   color: #00c214;
 }
-#Leaderboard .leaderboard-list-item-amount {
+
+.leaderboard-list-item-amount {
   color: #00c214;
   font-family: alphaHeadline;
   font-size: 36px;
@@ -716,13 +732,144 @@ ul.gamer_profile-overview-stats .gamer_profile-overview-stats-raised i, ul.gamer
   z-index: 2;
 }
 
-.section {
+#Home .section {
+  position: relative;
+}
+
+.home-hero {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  height: 75vh;
+  background-image: url("../img/home-hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.home-hero .home-hero-background_color {
+  background-color: #5900ff;
+  opacity: 0.36;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.home-hero h2, .home-hero p {
+  max-width: 700px;
+  text-align: center;
+}
+.home-hero h2 {
+  font-family: junegull;
+  font-size: 50px;
+  margin-bottom: 20px;
+  z-index: 2;
+}
+.home-hero p {
+  font-family: sourceSansPro;
+  font-size: 32px;
+  line-height: 45px;
+  color: #1b002b;
+  z-index: 2;
+}
+
+.home-intro {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 40px;
+  height: 75vh;
+}
+.home-intro .home-intro-donate_now,
+.home-intro .home-intro-start_gaming,
+.home-intro .home-intro-join_us {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.home-intro .home-intro-start_gaming {
+  margin: 0 40px;
+}
+.home-intro img {
+  max-width: 200px;
+  height: auto;
+}
+.home-intro p {
+  padding: 40px 0;
+}
+.home-intro button {
+  border: 2px solid #1b002b;
+  transition: all .5s ease-in-out;
+}
+.home-intro button:hover {
+  background-color: #1b002b;
+  color: #fff;
+}
+
+.home-leaderboard {
+  padding-bottom: 40px;
+}
+
+.home-leaderboard-header {
+  font-family: alphaHeadline;
+  font-size: 36px;
+  text-transform: uppercase;
+  line-height: 50px;
+  color: #5900ff;
+  text-align: center;
+  padding: 40px 0;
+  border-bottom: 2px solid #5900ff;
+}
+
+.home-news {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 80px 40px;
+  background-color: #f7f7f7;
+}
+.home-news .news-article {
+  max-width: 500px;
   padding: 40px;
+  background-color: #fff;
+}
+.home-news .news-article:first-child {
+  margin-right: 10px;
+}
+.home-news .news-article:last-child {
+  margin-left: 10px;
+}
+
+.news-article-title {
+  font-family: sourceSansPro;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 10px;
+}
+
+.news-article-publisher {
+  font-family: sourceSansPro;
+  font-size: 18px;
+  line-height: 27px;
+  margin-bottom: 5px;
+}
+
+.news-article-date {
+  font-family: alphaHeadline;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.news-article-snippet p {
+  margin-bottom: 5px;
 }
 
 .section-vertical {

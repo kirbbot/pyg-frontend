@@ -1,5 +1,5 @@
 <?php include 'head.php' ?>
-        <div id="Leaderboard" class="content">
+        <div id="Leaderboard" class="leaderboard content">
                 <ul class="leaderboard-list">
                         <li class="leaderboard-list-item">
                                 <a class="leaderboard-list-item-link" href="gamer_profile.php">

@@ -15,17 +15,19 @@
 // ********************************
 @import 'views/gamer-profile.scss';
 @import 'views/leaderboard.scss';
+@import 'views/home.scss';
+@import 'views/news.scss';
 
 // ********************************
 // Global
 // ********************************
 .section{
-        display:flex;
-        flex-direction:row;
-        flex-wrap:wrap;
-        justify-content: center;
-        align-items:center;
-        padding:40px;
+//         display:flex;
+//         flex-direction:row;
+//         flex-wrap:wrap;
+//         justify-content: center;
+//         align-items:center;
+        // padding:40px;
 }
 .section-vertical{
         display:flex;

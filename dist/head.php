@@ -17,9 +17,9 @@
         <nav id="Nav">
                 <h1 class="nav-logo"><a href="index.php">Paws Your Game</a></h1>
                 <ul>
-                        <li><a href="our-tail.html">Our Tail</a></li>
-                        <li><a href="leaderboard.html">Leaderboard</a></li>
-                        <li><a href="news.html">News</a></li>
+                        <li><a href="our-tail.php">Our Tail</a></li>
+                        <li><a href="leaderboard.php">Leaderboard</a></li>
+                        <li><a href="news.php">News</a></li>
                         <li class="nav-search">
                                 <form>
                                         <button>
