@@ -645,7 +645,75 @@ ul.gamer_profile-overview-stats .gamer_profile-overview-stats-raised i, ul.gamer
 }
 
 #Leaderboard {
-  background-color: #5900ff;
+  background-color: #1b002b;
+}
+#Leaderboard li.leaderboard-list-item {
+  padding: 0 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  position: relative;
+  transition: background-color .5s ease-in-out;
+}
+#Leaderboard li.leaderboard-list-item:hover {
+  background-color: rgba(89, 0, 255, 0.3);
+  cursor: pointer;
+}
+#Leaderboard li.leaderboard-list-item:not(:last-child) {
+  border-bottom: 1px solid rgba(89, 0, 255, 0.3);
+}
+#Leaderboard li.leaderboard-list-item:first-child .leaderboard-list-item-rank,
+#Leaderboard li.leaderboard-list-item:first-child .leaderboard-list-item-name {
+  color: #00c9db;
+}
+#Leaderboard .leaderboard-list-item-link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+#Leaderboard .leaderboard-list-item-rank {
+  color: #5900ff;
+  font-family: alphaHeadline;
+  font-size: 46px;
+  z-index: 2;
+}
+#Leaderboard .leaderboard-list-item-avatar {
+  max-height: 50px;
+  width: auto;
+  border-radius: 100px;
+  z-index: 2;
+}
+#Leaderboard .leaderboard-list-item-name {
+  color: #fff;
+  font-family: alphaHeadline;
+  font-size: 36px;
+  text-transform: uppercase;
+  line-height: 50px;
+  font-size: 30px;
+  z-index: 2;
+}
+#Leaderboard .leaderboard-list-item-change {
+  font-size: 24px;
+  z-index: 2;
+  width: 50px;
+}
+#Leaderboard .leaderboard-list-item-change.leaderboard-list-item-change-icon_down {
+  color: #ff5b00;
+}
+#Leaderboard .leaderboard-list-item-change.leaderboard-list-item-change-icon_up {
+  color: #00c214;
+}
+#Leaderboard .leaderboard-list-item-amount {
+  color: #00c214;
+  font-family: alphaHeadline;
+  font-size: 36px;
+  text-transform: uppercase;
+  line-height: 50px;
+  z-index: 2;
 }
 
 .section {
